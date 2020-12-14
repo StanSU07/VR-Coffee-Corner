@@ -6,6 +6,7 @@ public class MultiPlayer : MonoBehaviour
 {
     public Transform[] waypoints;
     public int speed;
+    public Animator anim;
     
     private int waypointIndex;
     private float distance; 
@@ -15,6 +16,7 @@ public class MultiPlayer : MonoBehaviour
     {
         waypointIndex=0;
         transform.LookAt(waypoints[waypointIndex].position);
+        anim= GetComponent<Animator>();
     }
 
     

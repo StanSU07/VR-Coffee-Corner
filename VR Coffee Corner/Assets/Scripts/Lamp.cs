@@ -1,8 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lamp : MonoBehaviour {
+public class Lamp : MonoBehaviour
+{
 
     [HideInInspector]
     public GameObject LampLight;
@@ -12,6 +13,7 @@ public class Lamp : MonoBehaviour {
 
     [HideInInspector]
     public GameObject DomeOn;
+
     public bool TurnOn=false;
     
     
