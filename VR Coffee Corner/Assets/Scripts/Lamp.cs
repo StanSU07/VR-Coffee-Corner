@@ -12,25 +12,25 @@ public class Lamp : MonoBehaviour {
 
     [HideInInspector]
     public GameObject DomeOn;
-
-    public bool TurnOn;
+    public bool TurnOn=false;
     
     
 
 	// Use this for initialization
-	public void TurnOnLamp () {
-    
+	public void LampSwitch () {
+        if(TurnOn==false){
             LampLight.SetActive(true);
             DomeOff.SetActive(false);
             DomeOn.SetActive(true);
-        
-
-        
-    }
-
-    public void TurnoffLamp(){
+        }
+        else if(TurnOn==true){
             LampLight.SetActive(false);
             DomeOff.SetActive(true);
             DomeOn.SetActive(false);
+        }
+
+        
     }
+
+
 }
