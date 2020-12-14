@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.2925, y: -176}
+  m_AnchoredPosition: {x: 1.2925, y: -47}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28864716
@@ -387,7 +387,19 @@ MonoBehaviour:
   restPoints: 0
   energyBar: 0
   task:
-    isActive: 0
+  - isActive: 0
+    description: 
+    restPointsReward: 0
+    energyPointsReward: 0
+  - isActive: 0
+    description: 
+    restPointsReward: 0
+    energyPointsReward: 0
+  - isActive: 0
+    description: 
+    restPointsReward: 0
+    energyPointsReward: 0
+  - isActive: 0
     description: 
     restPointsReward: 0
     energyPointsReward: 0
@@ -4715,8 +4727,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -4.9, y: 2}
-  m_SizeDelta: {x: 480, y: 498.75}
+  m_AnchoredPosition: {x: -4.9, y: 2.71}
+  m_SizeDelta: {x: 480, y: 349.8902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579863032
 MonoBehaviour:
@@ -4769,6 +4781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c9d97652d1f214189a496dfaa0f0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasks: []
   task:
     isActive: 0
     description: Pick up the ball
