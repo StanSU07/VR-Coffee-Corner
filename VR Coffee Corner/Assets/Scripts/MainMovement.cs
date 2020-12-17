@@ -29,6 +29,7 @@ public class MainMovement : MonoBehaviour
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
+
         
     }
     
@@ -37,10 +38,12 @@ public class MainMovement : MonoBehaviour
         Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
 
         if(notSitting==true){
-        character.Move(direction * Time.fixedDeltaTime *speed);
+            character.Move(direction * Time.fixedDeltaTime *speed);
+            notSitting = false;
         }
         else if(notSitting==false){
             character.Move(direction * Time.fixedDeltaTime *0);
+            notSitting = true;
         }
 
     }
