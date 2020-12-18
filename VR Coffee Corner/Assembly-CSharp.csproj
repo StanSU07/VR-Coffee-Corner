@@ -63,7 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Emoji.cs" />
     <Compile Include="Assets\Scripts\AudioControll.cs" />
+    <Compile Include="Assets\Scripts\EnergyBar.cs" />
     <Compile Include="Assets\Scripts\HandPresence.cs" />
     <Compile Include="Assets\Scripts\InputSystem.cs" />
     <Compile Include="Assets\Scripts\Lamp.cs" />
@@ -661,6 +663,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/Master_CRAN/Desktop/Unity Docs/VRProject/VR Coffee Corner/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/Master_CRAN/Desktop/Unity Docs/VRProject/VR Coffee Corner/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>C:/Users/Master_CRAN/Desktop/Unity Docs/VRProject/VR Coffee Corner/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>

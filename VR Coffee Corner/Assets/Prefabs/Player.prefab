@@ -79,7 +79,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restPoints: 0
-  energyBar: 0
   task:
   - isActive: 0
     description: 
@@ -97,6 +96,10 @@ MonoBehaviour:
     description: 
     restPointsReward: 0
     energyPointsReward: 0
+  maxEnergy: 0
+  enBar: {fileID: 0}
+  decreaseAmount: 0
+  decreasePerSec: 0
 --- !u!1 &5714188173459418968
 GameObject:
   m_ObjectHideFlags: 0
