@@ -63,22 +63,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Emoji.cs" />
-    <Compile Include="Assets\Scripts\AudioControll.cs" />
-    <Compile Include="Assets\Scripts\EnergyBar.cs" />
-    <Compile Include="Assets\Scripts\HandPresence.cs" />
-    <Compile Include="Assets\Scripts\InputSystem.cs" />
-    <Compile Include="Assets\Scripts\Lamp.cs" />
-    <Compile Include="Assets\Scripts\MainMovement.cs" />
-    <Compile Include="Assets\Scripts\MultiPlayer.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Environment\AudioControll.cs" />
+    <Compile Include="Assets\Scripts\Environment\CollectItems.cs" />
+    <Compile Include="Assets\Scripts\Environment\Emoji.cs" />
+    <Compile Include="Assets\Scripts\Environment\ImgChange.cs" />
+    <Compile Include="Assets\Scripts\Environment\Lamp.cs" />
+    <Compile Include="Assets\Scripts\Environment\MultiPlayer.cs" />
+    <Compile Include="Assets\Scripts\Environment\Teleport.cs" />
+    <Compile Include="Assets\Scripts\Player\EnergyBar.cs" />
+    <Compile Include="Assets\Scripts\Player\HandPresence.cs" />
+    <Compile Include="Assets\Scripts\Player\MainMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Tasks\CollectingGoal.cs" />
+    <Compile Include="Assets\Scripts\Tasks\EventListener\TriggerArea.cs" />
+    <Compile Include="Assets\Scripts\Tasks\Events.cs" />
     <Compile Include="Assets\Scripts\Tasks\Goal.cs" />
     <Compile Include="Assets\Scripts\Tasks\Task.cs" />
     <Compile Include="Assets\Scripts\Tasks\TaskGiver.cs" />
-    <Compile Include="Assets\Scripts\Tasks\TaskGoal.cs" />
-    <Compile Include="Assets\Scripts\Tasks\TaskTextScript.cs" />
-    <Compile Include="Assets\Scripts\Teleport.cs" />
+    <Compile Include="Assets\Scripts\Tasks\TheTasks\FlowersTask.cs" />
+    <Compile Include="Assets\Scripts\Tasks\TheTasks\PoolTask.cs" />
+    <Compile Include="Assets\Scripts\Tasks\TheTasks\YogaTask.cs" />
+    <Compile Include="Assets\Scripts\Tasks\TimeGoal.cs" />
+    <Compile Include="Assets\Scripts\Tasks\Timers\StopWatch.cs" />
+    <Compile Include="Assets\Scripts\Tasks\Timers\Stopwatch_Manager.cs" />
+    <Compile Include="Assets\Scripts\Tasks\Timers\Timer1.cs" />
+    <Compile Include="Assets\Scripts\Tasks\Timers\Timer2.cs" />
+    <Compile Include="Assets\Scripts\Tasks\TriggerSpace.cs" />
+    <Compile Include="Assets\Scripts\Tasks\test\TaskGoal.cs" />
+    <Compile Include="Assets\Scripts\Tasks\test\TaskTextScript.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity versions/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
