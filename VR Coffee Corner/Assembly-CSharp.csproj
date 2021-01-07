@@ -63,6 +63,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\Joystick.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\TiltInput.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\VirtualInput.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\FPSC\Scripts\CurveControlledBob.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\FPSC\Scripts\FOVKick.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\FPSC\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\FPSC\Scripts\HeadBob.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\FPSC\Scripts\LerpControlledBob.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\FPSC\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\FPSC\Scripts\RigidbodyFirstPersonController.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\FPSC\Scripts\SimpleMouseRotator.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Scripts\BasicRaycast\BasicDoorController.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Scripts\BasicRaycast\BasicDoorRaycast.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Scripts\ButtonRaycastDoor\ButtonDoorController.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Scripts\ButtonRaycastDoor\ButtonDoorRaycast.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Scripts\KeyRaycastDoor\KeyDoorController.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Scripts\KeyRaycastDoor\KeyDoorInventory.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Scripts\KeyRaycastDoor\KeyDoorRaycast.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Scripts\KeyRaycastDoor\KeyItemController.cs" />
+    <Compile Include="Assets\Door Interaction Examples - FREE\Scripts\Trigger\TriggerDoorController.cs" />
+    <Compile Include="Assets\DoorScript.cs" />
     <Compile Include="Assets\Scripts\Environment\AudioControll.cs" />
     <Compile Include="Assets\Scripts\Environment\CollectItems.cs" />
     <Compile Include="Assets\Scripts\Environment\Emoji.cs" />
@@ -91,6 +120,8 @@
     <Compile Include="Assets\Scripts\Tasks\TriggerSpace.cs" />
     <Compile Include="Assets\Scripts\Tasks\test\TaskGoal.cs" />
     <Compile Include="Assets\Scripts\Tasks\test\TaskTextScript.cs" />
+    <Compile Include="Assets\playerController.cs" />
+    <None Include="Assets\Door Interaction Examples - FREE\Materials\3DText\3DText.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity versions/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
