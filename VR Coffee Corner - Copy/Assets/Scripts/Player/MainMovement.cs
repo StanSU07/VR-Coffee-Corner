@@ -29,7 +29,6 @@ public class MainMovement : MonoBehaviour
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
-
         
     }
     
@@ -40,12 +39,10 @@ public class MainMovement : MonoBehaviour
         Debug.Log("Sitting");
 
         if(notSitting==true){
-            character.Move(direction * Time.fixedDeltaTime *speed);
-            notSitting = false;
+        character.Move(direction * Time.fixedDeltaTime *speed);
         }
         else if(notSitting==false){
             character.Move(direction * Time.fixedDeltaTime *0);
-            notSitting = true;
         }
 
     }
