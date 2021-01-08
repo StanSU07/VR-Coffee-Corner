@@ -1,0 +1,9 @@
+diff a/VR Coffee Corner/Assets/Scenes/VR project.unity b/VR Coffee Corner/Assets/Scenes/VR project.unity	(rejected hunks)
+@@ -2125,6 +2125,7 @@
+   m_ShadowRadius: 0
+   m_ShadowAngle: 0
+ --- !u!4 &935971336
++<<<<<<< HEAD
+ Transform:
+   m_ObjectHideFlags: 0
+   m_CorrespondingSourceObject: {fileID: 0}
