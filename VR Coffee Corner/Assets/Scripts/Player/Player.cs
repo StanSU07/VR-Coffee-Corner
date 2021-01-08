@@ -18,6 +18,10 @@ public class Player : MonoBehaviour
     public int decreaseAmount;
     public float decreasePerSec;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void Start()
     {
         currentEnergy = maxEnergy;
@@ -28,7 +32,8 @@ public class Player : MonoBehaviour
         StartCoroutine("DecreaseEn");
 
         restPoints = 0;
- 
+
+
     }
 
     private void Update()
