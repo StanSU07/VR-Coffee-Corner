@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.SceneManagement;
 
 public class MainMovement : MonoBehaviour
 {
@@ -11,17 +12,21 @@ public class MainMovement : MonoBehaviour
     public float gravity = -9.81f;
     public LayerMask groundLayer;
     public float additionalHeight = 0.2f;
-    public bool notSitting=true;
+    public bool sitting=false;
 
     private float fallingSpeed;
     private XRRig rig;
     private Vector2 inputAxis;
     private CharacterController character;
+    private GameObject chair; 
     
-    void Start()
+    void Awake()
     {
         character = GetComponent<CharacterController>();
         rig = GetComponent<XRRig>();
+        DontDestroyOnLoad(gameObject);
+        chair = GameObject.Find("Chair");
+
     }
 
     
@@ -33,22 +38,7 @@ public class MainMovement : MonoBehaviour
         
     }
     
-    public void Sit(){
-        Quaternion headYaw = Quaternion.Euler(0, rig.cameraGameObject.transform.eulerAngles.y,0);
-        Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
-
-        Debug.Log("Sitting");
-
-        if(notSitting==true){
-            character.Move(direction * Time.fixedDeltaTime *speed);
-            notSitting = false;
-        }
-        else if(notSitting==false){
-            character.Move(direction * Time.fixedDeltaTime *0);
-            notSitting = true;
-        }
-
-    }
+  
     public void FixedUpdate()
     {
         CapsuleFollowedHeadSet();
@@ -56,8 +46,17 @@ public class MainMovement : MonoBehaviour
         
         //Moving Code 
         Quaternion headYaw = Quaternion.Euler(0, rig.cameraGameObject.transform.eulerAngles.y,0);
+        if(sitting==false){
         Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
         character.Move(direction * Time.fixedDeltaTime *speed);
+        }
+        if(sitting==true){
+        Vector3 direction = headYaw * new Vector3(0, 0,0);
+        character.Move(direction * Time.fixedDeltaTime *0);
+        }
+        if (Input.GetKeyDown("space")){
+        sitting=false;
+         }
 
         //Gravity
         bool isGrounded = checkIfGrounded();
@@ -82,5 +81,25 @@ public class MainMovement : MonoBehaviour
         float rayLength = character.center.y + 0.01f;
         bool hasHit = Physics.SphereCast(rayStart, character.radius, Vector3.down, out RaycastHit hitInfo, rayLength, groundLayer);
         return hasHit;
+    }
+
+     void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "portal")
+        {
+            SceneManager.LoadScene("Zen Garden");
+            gameObject.transform.position = new Vector3(3, 0, 3);
+        }
+
+         if (collision.gameObject.name == "Chair")
+        {
+            gameObject.transform.position = chair.transform.position;
+            sitting=true;
+          
+        }
+}
+    public void chairSit(){
+            gameObject.transform.position = chair.transform.position;
+            sitting=true;
     }
 }
