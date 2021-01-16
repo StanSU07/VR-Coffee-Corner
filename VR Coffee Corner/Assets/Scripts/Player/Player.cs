@@ -11,12 +11,12 @@ public class Player : MonoBehaviour
    //public List <Task> task ;
 
 
-    public int maxEnergy;
+    public int maxEnergy = 100;
     private int currentEnergy;
     public EnergyBar enBar;
     private bool foodConsumed;
-    public int decreaseAmount;
-    public float decreasePerSec;
+    public int decreaseAmount = 5; //how much should the energy deacrease
+    public float decreasePerSec = 1; //per how many seconds
 
     private void Awake()
     {
@@ -32,8 +32,9 @@ public class Player : MonoBehaviour
         StartCoroutine("DecreaseEn");
 
         restPoints = 0;
-
-
+        maxEnergy = 100;
+        decreaseAmount = 5;
+        decreasePerSec = 1;
     }
 
     private void Update()

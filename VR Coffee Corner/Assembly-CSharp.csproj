@@ -102,10 +102,15 @@
     <Compile Include="Assets\Scripts\Environment\MultiPlayer.cs" />
     <Compile Include="Assets\Scripts\Environment\SceneChangeTest.cs" />
     <Compile Include="Assets\Scripts\Environment\Teleport.cs" />
+    <Compile Include="Assets\Scripts\NPC\DudeVoiceDialogueManager.cs" />
+    <Compile Include="Assets\Scripts\NPC\GirlVoiceDialogueManager.cs" />
+    <Compile Include="Assets\Scripts\NPC\VoiceDialogue.cs" />
+    <Compile Include="Assets\Scripts\NPC\VoiceDialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Player\EnergyBar.cs" />
     <Compile Include="Assets\Scripts\Player\HandPresence.cs" />
     <Compile Include="Assets\Scripts\Player\MainMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\TeleportationAccess.cs" />
     <Compile Include="Assets\Scripts\Tasks\CollectingGoal.cs" />
     <Compile Include="Assets\Scripts\Tasks\Events.cs" />
     <Compile Include="Assets\Scripts\Tasks\Goal.cs" />
