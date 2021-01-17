@@ -13,6 +13,10 @@ public class MainMovement : MonoBehaviour
     public LayerMask groundLayer;
     public float additionalHeight = 0.2f;
     public bool sitting=false;
+    public GameObject player;
+    public InputHelpers.Button tpActivationButton;
+    public float activationThreshold = 0.1f;
+    public XRController controller;
 
     private float fallingSpeed;
     private XRRig rig;
@@ -25,17 +29,25 @@ public class MainMovement : MonoBehaviour
         character = GetComponent<CharacterController>();
         rig = GetComponent<XRRig>();
         DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(player);
         chair = GameObject.Find("Chair");
 
     }
 
-    
+    private void Start()
+    {
+        gameObject.transform.position = player.transform.position;
+    }
+
     void Update()
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
 
-        
+        if (controller)
+        {
+            CheckIfActivated(controller);
+        }
     }
     
   
@@ -69,7 +81,15 @@ public class MainMovement : MonoBehaviour
         character.Move(Vector3.up * fallingSpeed *Time.fixedDeltaTime);
     }
     }
-
+    public bool CheckIfActivated(XRController controller)
+    {
+        InputHelpers.IsPressed(controller.inputDevice, tpActivationButton, out bool isActivated, activationThreshold);
+        if (sitting && isActivated)
+        {
+            sitting = false;
+        }
+        return isActivated;
+    }
     void CapsuleFollowedHeadSet(){
         character.height = rig.cameraInRigSpaceHeight + additionalHeight;
         Vector3 capsuleCenter = transform.InverseTransformPoint(rig.cameraGameObject.transform.position);
@@ -87,17 +107,52 @@ public class MainMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "portal")
         {
-            SceneManager.LoadScene("Zen Garden");
-            gameObject.transform.position = new Vector3(3, 0, 3);
+/*            Debug.Log("collided with portal");
+            SceneManager.LoadScene("ZenRoom");
+            player.transform.position = new Vector3(-4, 10, -20);
+            gameObject.transform.position = new Vector3(-4, 10, 30);*/
+
         }
 
-         if (collision.gameObject.name == "Chair")
+        if (collision.gameObject.name == "Chair")
         {
             gameObject.transform.position = chair.transform.position;
             sitting=true;
           
         }
-}
+     }
+    public void TeleportToZen()
+    {
+        Debug.Log("Entered portal");
+        SceneManager.LoadScene("ZenRoom", LoadSceneMode.Single);
+        player.transform.position = new Vector3(0, 20, -31);
+        gameObject.transform.position = new Vector3(0, 10, -31);
+
+    }
+    public void TeleportToArcade()
+    {
+        Debug.Log("Entered portal");
+        SceneManager.LoadScene("ArcadeRoom", LoadSceneMode.Single);
+        player.transform.position = new Vector3(24, 20, 0);
+        gameObject.transform.position = new Vector3(24, 10, 0);
+
+    }
+    public void TeleportToLobbyFromZen()
+    {
+        Debug.Log("Entered portal");
+        SceneManager.LoadScene("MainLobby", LoadSceneMode.Single);
+        player.transform.position = new Vector3(0, 20, -31);
+        gameObject.transform.position = new Vector3(24, 10, 33);
+
+    }
+    public void TeleportToLobbyFromArcade()
+    {
+        Debug.Log("Entered portal");
+        SceneManager.LoadScene("MainLobby", LoadSceneMode.Single);
+        player.transform.position = new Vector3(0, 20, -31);
+        gameObject.transform.position = new Vector3(0, 10, -31);
+
+    }
     public void chairSit(){
             gameObject.transform.position = chair.transform.position;
             sitting=true;

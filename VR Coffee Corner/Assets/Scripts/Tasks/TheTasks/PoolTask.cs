@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class PoolTask : Task
 {
     public int timeAmount = 5;
 
-    public Text descriptionText;
-    public Text rewardText;
+    public TMP_Text descriptionText;
+    public TMP_Text rewardText;
     public GameObject check;
-    public GameObject TaskWindow;
 
     void Start()
     {
-        TaskWindow = GameObject.Find("TasksWindow");
-        descriptionText = GameObject.Find("PDescription").GetComponent<Text>();
-        rewardText = GameObject.Find("PRestPointsReward").GetComponent<Text>();
+        descriptionText = GameObject.Find("Task2").GetComponent<TMP_Text>();
+        rewardText = GameObject.Find("Reward2").GetComponent<TMP_Text>();
         check = GameObject.Find("PChecked");
 
         description = "Go Swimming in the pool for " + timeAmount.ToString() + " in the Zen Garden";
@@ -31,15 +30,14 @@ public class PoolTask : Task
 
     private void Update()
     {
-        if (TaskWindow.activeSelf)
-        {
+       
             descriptionText.text = description;
-            rewardText.text = restPointsReward.ToString() + " rest points";
+            rewardText.text = restPointsReward.ToString() + " pnt";
 
             if (Completed)
             {
                 check.SetActive(true);
             }
-        }
+        
     }
 }

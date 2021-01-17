@@ -51,6 +51,10 @@ public class DudeVoiceDialogueManager : MonoBehaviour
             anim.SetBool("isOpen", false);
         }
 
+        if (voicelines.Count == 2)
+        {
+            Debug.Log("2nd line");
+        }
         AudioSource sentence = voicelines.Dequeue();
         voiceClip.clip = sentence.clip;
         voiceClip.Play();

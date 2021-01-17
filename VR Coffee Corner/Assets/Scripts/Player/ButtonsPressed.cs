@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-
-public class TeleportationAccess : MonoBehaviour
+public class ButtonsPressed : MonoBehaviour
 {
     public XRController teleportRay;
     public InputHelpers.Button tpActivationButton;
@@ -15,13 +14,17 @@ public class TeleportationAccess : MonoBehaviour
     {
         if (teleportRay)
         {
-            teleportRay.gameObject.SetActive(CheckIfActivated(teleportRay));
+            CheckIfActivated(teleportRay);
         }
     }
 
     public bool CheckIfActivated(XRController controller)
     {
         InputHelpers.IsPressed(controller.inputDevice, tpActivationButton, out bool isActivated, activationThreshold);
+        if (isActivated)
+        {
+            Debug.Log(tpActivationButton + " has been pressed");
+        }
         return isActivated;
     }
 }

@@ -2,23 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 
 public class YogaTask :  Task
 { 
     public int timeAmount = 10;
 
-    public Text descriptionText;
-    public Text rewardText;
+    public TMP_Text descriptionText;
+    public TMP_Text rewardText;
     public GameObject check;
-    public GameObject TaskWindow;
 
     void Start()
     {
-        TaskWindow = GameObject.Find("TasksWindow");
-        descriptionText = GameObject.Find("YDescription").GetComponent<Text>();
-        rewardText = GameObject.Find("YRestPointsReward").GetComponent<Text>();
+        descriptionText = GameObject.Find("Task1").GetComponent<TMP_Text>();
+        rewardText = GameObject.Find("Reward1").GetComponent<TMP_Text>();
         check = GameObject.Find("YChecked");
 
         description = "Do Yoga in the Zen Garden for "+ timeAmount.ToString() + " seconds";
@@ -33,16 +31,15 @@ public class YogaTask :  Task
 
     private void Update()
     {
-        if (TaskWindow.activeSelf)
-        {
+
             descriptionText.text = description;
-            rewardText.text = restPointsReward.ToString() + " rest points";
+            rewardText.text = restPointsReward.ToString() + " pnt";
 
             if (Completed)
             {
                 check.SetActive(true);
             }
-        }
+
     }
 
 }

@@ -63,7 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\DoorScript.cs" />
+    <Compile Include="Assets\InteractionRayAccess.cs" />
     <Compile Include="Assets\Materials\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Materials\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Materials\Door Interaction Examples - FREE\Additional Packs\FPSController_Package\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="Assets\Scripts\NPC\GirlVoiceDialogueManager.cs" />
     <Compile Include="Assets\Scripts\NPC\VoiceDialogue.cs" />
     <Compile Include="Assets\Scripts\NPC\VoiceDialogueTrigger.cs" />
+    <Compile Include="Assets\Scripts\Player\ButtonsPressed.cs" />
     <Compile Include="Assets\Scripts\Player\EnergyBar.cs" />
     <Compile Include="Assets\Scripts\Player\HandPresence.cs" />
     <Compile Include="Assets\Scripts\Player\MainMovement.cs" />
@@ -125,7 +128,9 @@
     <Compile Include="Assets\Scripts\Tasks\Timers\Timer1.cs" />
     <Compile Include="Assets\Scripts\Tasks\Timers\Timer2.cs" />
     <Compile Include="Assets\Scripts\Tasks\TriggerSpace.cs" />
+    <Compile Include="Assets\TriggerCheck.cs" />
     <Compile Include="Assets\playerController.cs" />
+    <Compile Include="Assets\positionManager.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Resources\LineBreaking Leading Characters.txt" />

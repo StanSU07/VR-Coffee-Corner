@@ -77,7 +77,7 @@ public class TaskGiver : MonoBehaviour
     {
 
         //get a task reference
-      //  Task1 = GameObject.Find("Tasks").GetComponent<YogaTask>();
+       // Task1 = GameObject.Find("Tasks").GetComponent<YogaTask>();
         if (Task1.Completed && Task2.Completed && Task3.Completed)
         {
             Task1.GiveReward();

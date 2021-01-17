@@ -7,6 +7,7 @@ using UnityEngine;
 public class Teleport : MonoBehaviour
 {
     public GameObject player;
+    public GameObject XR;
     private GameObject zenPortal;
     private GameObject arcadePortal;
     private GameObject zenlobbyPortal;
@@ -23,7 +24,6 @@ public class Teleport : MonoBehaviour
         arcadePortal = GameObject.Find("ArcadePortal");
         zenlobbyPortal = GameObject.Find("PortalToZen");
         arcadelobbyPortal = GameObject.Find("PortalToArcade");
-
     }
 
     //Summary
@@ -41,26 +41,33 @@ public class Teleport : MonoBehaviour
             if (this.gameObject == zenlobbyPortal)
             {
                 SceneManager.LoadScene("ZenRoom");
-                player.transform.position = new Vector3(zenPortal.transform.position.x, zenPortal.transform.position.y, zenPortal.transform.position.z + 20);
-                //player.transform.position = new Vector3(23, 0, 0);
+               // player.transform.position = new Vector3(zenPortal.transform.position.x, zenPortal.transform.position.y, zenPortal.transform.position.z + 20);
+                player.transform.position = new Vector3(-4, 50, -20);
+                XR.transform.position = new Vector3(0, 0, 0);
             }
             if (this.gameObject == arcadelobbyPortal)
             {
                 SceneManager.LoadScene("ArcadeRoom");
-                player.transform.position = new Vector3(arcadePortal.transform.position.x + 20, arcadePortal.transform.position.y, arcadePortal.transform.position.z);
-                //player.transform.position = new Vector3(0, -7, 0);
+               // player.transform.position = new Vector3(arcadePortal.transform.position.x + 20, arcadePortal.transform.position.y, arcadePortal.transform.position.z);
+                player.transform.position = new Vector3(0, -7, 0);
+                XR.transform.position = new Vector3(0, 0, 0);
+
             }
             if (this.gameObject == zenPortal)
             {
                 SceneManager.LoadScene("MainLobby");
-                player.transform.position = new Vector3(zenlobbyPortal.transform.position.x , zenlobbyPortal.transform.position.y, zenlobbyPortal.transform.position.z);
-               // player.transform.position = new Vector3(12, -20, 0);
+                //player.transform.position = new Vector3(zenlobbyPortal.transform.position.x , zenlobbyPortal.transform.position.y, zenlobbyPortal.transform.position.z);
+                player.transform.position = new Vector3(12, -20, 0);
+                XR.transform.position = new Vector3(0, 0, 0);
+
             }
             if (this.gameObject == arcadePortal)
             {
                 SceneManager.LoadScene("MainLobby");
-                player.transform.position = new Vector3(arcadelobbyPortal.transform.position.x + 20, arcadelobbyPortal.transform.position.y, arcadelobbyPortal.transform.position.z);
-               // player.transform.position = new Vector3(6, -20, 0);
+                //player.transform.position = new Vector3(arcadelobbyPortal.transform.position.x + 20, arcadelobbyPortal.transform.position.y, arcadelobbyPortal.transform.position.z);
+                player.transform.position = new Vector3(6, -20, 0);
+                XR.transform.position = new Vector3(0, 0, 0);
+
             }
 
         }

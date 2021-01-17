@@ -12,20 +12,22 @@ public class text : MonoBehaviour
     float gameTimer = 0f;
     
 
-    void Start()
+    void Awake()
     {
         string time = System.DateTime.UtcNow.ToLocalTime().ToString("HH:mm");
         string date = System.DateTime.UtcNow.ToLocalTime().ToString("dd-MM-yyyy");
-        string location=UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+       
         timeText.text=time;
         dateText.text=date; 
-        locationText.text = location;
+       
         
   
     }
 
     void Update(){
-        gameTimer+=Time.deltaTime;
+        string location = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        locationText.text = location;
+        gameTimer +=Time.deltaTime;
 
         int seconds = (int)(gameTimer % 60);
         int minutes = (int)(gameTimer/60) % 60;

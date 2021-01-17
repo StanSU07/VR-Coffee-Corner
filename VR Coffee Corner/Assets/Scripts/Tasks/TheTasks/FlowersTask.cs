@@ -2,23 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class FlowersTask : Task
 {
     public int amount = 2;
 
-
-    public Text descriptionText;
-    public Text rewardText;
+    public TMP_Text descriptionText;
+    public TMP_Text rewardText;
     public GameObject check;
-    public GameObject TaskWindow;
 
     void Start()
     {
-        TaskWindow = GameObject.Find("TasksWindow");
-        descriptionText = GameObject.Find("FDescription").GetComponent<Text>();
-        rewardText = GameObject.Find("FRestPointsReward").GetComponent<Text>();
+        descriptionText = GameObject.Find("Task3").GetComponent<TMP_Text>();
+        rewardText = GameObject.Find("Reward3").GetComponent<TMP_Text>();
         check = GameObject.Find("FChecked");
 
         description = "Pick " + amount.ToString() + " Flowers in the Zen Garden";
@@ -32,15 +30,12 @@ public class FlowersTask : Task
 
     private void Update()
     {
-        if (TaskWindow.activeSelf)
-        {
             descriptionText.text = description;
-            rewardText.text = restPointsReward.ToString() + " rest points";
+            rewardText.text = restPointsReward.ToString() + " pnt";
 
             if (Completed)
             {
                 check.SetActive(true);
             }
-        }
     }
 }
