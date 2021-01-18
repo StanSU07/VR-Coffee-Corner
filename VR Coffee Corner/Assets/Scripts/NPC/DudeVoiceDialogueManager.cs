@@ -10,6 +10,7 @@ public class DudeVoiceDialogueManager : MonoBehaviour
     public Animator anim;
 
     public Queue<AudioSource> voicelines;
+    public AudioSource hello;
 
     public bool isTalking;
 
@@ -20,6 +21,14 @@ public class DudeVoiceDialogueManager : MonoBehaviour
         isTalking = false;
     }
 
+    public void StartConversation()
+    {
+        anim.SetBool("isOpen", true);
+        isTalking = true;
+        voiceClip.clip = hello.clip;
+        voiceClip.Play();
+        EndConversation();
+    }
 
     public void StartVDialogue(VoiceDialogue vDialogue)
     {

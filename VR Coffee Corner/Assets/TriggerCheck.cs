@@ -10,10 +10,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class TriggerCheck : MonoBehaviour
 {
     public Animator textAnim;
+    [SerializeField]
+    private GameObject FoodUI;
     public VoiceDialogueTrigger taskGuy;
     public XRController controller;
     public InputHelpers.Button talkButton;
     public float activationThreshold = 0.1f;
+
+    private void Start()
+    {
+        FoodUI.SetActive(false);
+    }
 
     //If talkbutton is pressed then hide the help text and start conversation
     public bool CheckIfTalkButtonIsActivated(XRController controller)
@@ -22,7 +29,13 @@ public class TriggerCheck : MonoBehaviour
         if (isActivated)
         {
             textAnim.SetBool("isOpen", false);
-            taskGuy.triggertaskDialogue();
+
+            
+                taskGuy.triggerfoodDialogue();
+            
+                taskGuy.triggertaskDialogue();
+            
+            
         }
         return isActivated;
     }
@@ -44,6 +57,17 @@ public class TriggerCheck : MonoBehaviour
             {
                 CheckIfTalkButtonIsActivated(controller);
             }
+            if (CheckIfTalkButtonIsActivated(controller) && this.gameObject.name == "FoodTrigger")
+            {
+                if (!FoodUI.activeSelf)
+                {
+                    FoodUI.SetActive(true);
+                }
+                else
+                {
+                    FoodUI.SetActive(false);
+                }
+            }
         }
     }
 
@@ -52,6 +76,11 @@ public class TriggerCheck : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             textAnim.SetBool("isOpen", false);
+        }
+
+        if (FoodUI.activeSelf)
+        {
+            FoodUI.SetActive(false);
         }
     }
 }

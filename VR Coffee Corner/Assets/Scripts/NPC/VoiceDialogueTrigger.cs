@@ -32,7 +32,7 @@ public class VoiceDialogueTrigger : MonoBehaviour
         {
             if (!DudeTalking)
             {
-                FindObjectOfType<DudeVoiceDialogueManager>().StartVDialogue(vDialogue);
+                FindObjectOfType<DudeVoiceDialogueManager>().StartConversation();
 
             }
         }

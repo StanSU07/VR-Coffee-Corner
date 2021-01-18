@@ -14,6 +14,7 @@ public class TaskGiver : MonoBehaviour
 
     [SerializeField]
     private GameObject taskWindow;
+    [SerializeField]
     private Stopwatch_Manager stpwManager;
 
     //the 3 given tasks
@@ -28,12 +29,23 @@ public class TaskGiver : MonoBehaviour
     public Task Task2 { get; set; }
     public Task Task3 { get; set; }
 
+    public AudioSource[] voicelines;
+    public AudioSource TaskDude;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Start()
     {
-        stpwManager = GameObject.Find("Stopwatch_Manager").GetComponent<Stopwatch_Manager>();
         taskWindow.SetActive(false);
+    }
+
+    private void Update()
+    {
+        stpwManager = GameObject.Find("Stopwatch_Manager").GetComponent<Stopwatch_Manager>();
+        taskWindow = GameObject.Find("TaskWindow");
     }
 
     public void Interact()
@@ -42,7 +54,7 @@ public class TaskGiver : MonoBehaviour
             //assign
             AssignTask();
         }
-        else if (AssignedTask)
+        else
         {
             //check
             CheckTask();
@@ -53,10 +65,12 @@ public class TaskGiver : MonoBehaviour
     public void AssignTask()
     {
         AssignedTask = true;
-        taskWindow.SetActive(true); 
-        
+        taskWindow.SetActive(true);
 
 
+        TaskDude.clip = voicelines[1].clip;
+        TaskDude.Play();
+        Debug.Log(TaskDude.name.ToString());
        Debug.Log("3 tasks have been assigned");
 
         RandomTasks();
@@ -92,10 +106,17 @@ public class TaskGiver : MonoBehaviour
             stpwManager.resetStpwMethod();
 
             Debug.Log("You completed the tasks");
+            TaskDude.clip = voicelines[3].clip;
+            TaskDude.Play();
+            Debug.Log(TaskDude.clip.name.ToString());
         }
         else
         {
             Debug.Log("You still have tasks to complete");
+            TaskDude.clip = voicelines[2].clip;
+            TaskDude.Play();
+            Debug.Log(TaskDude.clip.name.ToString());
+
         }
     }
 

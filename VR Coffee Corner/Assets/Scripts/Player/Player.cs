@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
         }
         //-------------------------
 
+        enBar = GameObject.Find("EnergyBar").GetComponent<EnergyBar>();
     }
 
 

@@ -28,15 +28,12 @@ public class MainMovement : MonoBehaviour
     {
         character = GetComponent<CharacterController>();
         rig = GetComponent<XRRig>();
-        DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(player);
         chair = GameObject.Find("Chair");
 
     }
 
     private void Start()
     {
-        gameObject.transform.position = player.transform.position;
     }
 
     void Update()

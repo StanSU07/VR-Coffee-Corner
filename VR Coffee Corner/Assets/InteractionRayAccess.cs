@@ -11,22 +11,55 @@ public class InteractionRayAccess : MonoBehaviour
     public InputHelpers.Button rayActivationButton;
     public float activationThreshold = 0.1f;
 
-    // Update is called once per frame
+    private bool justPressed = false;
+
+
     void Update()
     {
         if (rightcontroller)
         {
-            rightcontroller.gameObject.SetActive(CheckIfActivated(rightcontroller));
+            if (ButtonHeldDown(rightcontroller))
+            {
+                if (!justPressed)
+                {
+                    justPressed = true;
+                    rightcontroller.gameObject.SetActive(!rightcontroller.gameObject.activeSelf);
+                }
+            }
+            else
+            {
+                if (justPressed)
+                {
+                    justPressed = false;
+                }
+            }
+
         }
         if (leftcontroller)
-        {
-            leftcontroller.gameObject.SetActive(CheckIfActivated(leftcontroller));
-        }
+            if (ButtonHeldDown(leftcontroller))
+            {
+                if (!justPressed)
+                {
+                    justPressed = true;
+                    leftcontroller.gameObject.SetActive(!leftcontroller.gameObject.activeSelf);
+                }
+            }
+            else
+            {
+                if (justPressed)
+                {
+                    justPressed = false;
+                }
+            }
+
+
     }
 
-    public bool CheckIfActivated(XRController controller)
+    public bool ButtonHeldDown(XRController controller)
     {
-        InputHelpers.IsPressed(controller.inputDevice, rayActivationButton, out bool isActivated, activationThreshold);
-        return isActivated;
+        InputHelpers.IsPressed(controller.inputDevice, rayActivationButton, out bool heldDown, activationThreshold);
+
+        return heldDown;
     }
+
 }

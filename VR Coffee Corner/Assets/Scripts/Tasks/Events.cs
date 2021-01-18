@@ -10,6 +10,7 @@ public class Events : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         current = this;
     }
 
