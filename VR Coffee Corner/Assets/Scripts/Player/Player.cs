@@ -12,11 +12,11 @@ public class Player : MonoBehaviour
 
 
     public int maxEnergy = 100;
-    private int currentEnergy;
+    public int currentEnergy;
     public EnergyBar enBar;
     private bool foodConsumed;
-    public int decreaseAmount = 5; //how much should the energy deacrease
-    public float decreasePerSec = 1; //per how many seconds
+    public int decreaseAmount; //how much should the energy deacrease
+    public float decreasePerSec; //per how many seconds
 
     private void Awake()
     {
@@ -33,8 +33,6 @@ public class Player : MonoBehaviour
 
         restPoints = 0;
         maxEnergy = 100;
-        decreaseAmount = 5;
-        decreasePerSec = 1;
     }
 
     private void Update()
@@ -57,7 +55,6 @@ public class Player : MonoBehaviour
         }
         //-------------------------
 
-        enBar = GameObject.Find("EnergyBar").GetComponent<EnergyBar>();
     }
 
 

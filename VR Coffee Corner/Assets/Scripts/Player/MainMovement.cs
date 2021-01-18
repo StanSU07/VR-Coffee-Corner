@@ -34,6 +34,7 @@ public class MainMovement : MonoBehaviour
 
     private void Start()
     {
+        gameObject.transform.position = player.transform.position;
     }
 
     void Update()
