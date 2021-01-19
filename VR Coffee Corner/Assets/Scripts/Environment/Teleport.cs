@@ -12,6 +12,7 @@ public class Teleport : MonoBehaviour
     private GameObject arcadelobbyPortal;
 
     public GameObject xrRig;
+    public text Script;
 
     private void Start()
     {
@@ -37,24 +38,28 @@ public class Teleport : MonoBehaviour
             {
                // SceneManager.LoadScene("ZenRoom");
                 xrRig.transform.position = new Vector3(zenPortal.transform.position.x, zenPortal.transform.position.y, zenPortal.transform.position.z + 20);
+                Script.GetComponent<text>().SetLocationZenGarden();
             }
 
             if (this.gameObject == arcadelobbyPortal)
             {
                 //SceneManager.LoadScene("ArcadeRoom");
                 xrRig.transform.position = new Vector3(arcadePortal.transform.position.x - 20, arcadePortal.transform.position.y, arcadePortal.transform.position.z);
+                Script.GetComponent<text>().SetLocationArcade();
             }
 
             if (this.gameObject == zenPortal)
             {
                 //SceneManager.LoadScene("MainLobby");
                 xrRig.transform.position = new Vector3(zenlobbyPortal.transform.position.x , zenlobbyPortal.transform.position.y, zenlobbyPortal.transform.position.z);
+                Script.GetComponent<text>().SetLocationMainLobby();
             }
 
             if (this.gameObject == arcadePortal)
             {
                 //SceneManager.LoadScene("MainLobby");
                 xrRig.transform.position = new Vector3(arcadelobbyPortal.transform.position.x + 20, arcadelobbyPortal.transform.position.y, arcadelobbyPortal.transform.position.z);
+                Script.GetComponent<text>().SetLocationMainLobby();
             }
 
         }
