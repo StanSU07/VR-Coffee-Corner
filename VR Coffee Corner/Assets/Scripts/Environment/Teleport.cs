@@ -35,25 +35,21 @@ public class Teleport : MonoBehaviour
 
             if (this.gameObject == zenlobbyPortal)
             {
-               // SceneManager.LoadScene("ZenRoom");
                 xrRig.transform.position = new Vector3(zenPortal.transform.position.x, zenPortal.transform.position.y, zenPortal.transform.position.z + 3);
             }
 
             if (this.gameObject == arcadelobbyPortal)
             {
-                //SceneManager.LoadScene("ArcadeRoom");
                 xrRig.transform.position = new Vector3(arcadePortal.transform.position.x - 3, arcadePortal.transform.position.y, arcadePortal.transform.position.z);
             }
 
             if (this.gameObject == zenPortal)
             {
-                //SceneManager.LoadScene("MainLobby");
                 xrRig.transform.position = new Vector3(zenlobbyPortal.transform.position.x - 3 , zenlobbyPortal.transform.position.y, zenlobbyPortal.transform.position.z);
             }
 
             if (this.gameObject == arcadePortal)
             {
-                //SceneManager.LoadScene("MainLobby");
                 xrRig.transform.position = new Vector3(arcadelobbyPortal.transform.position.x + 3, arcadelobbyPortal.transform.position.y, arcadelobbyPortal.transform.position.z);
             }
 
