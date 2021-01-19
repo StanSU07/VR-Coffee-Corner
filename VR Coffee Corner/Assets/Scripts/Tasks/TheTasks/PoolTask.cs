@@ -21,7 +21,7 @@ public class PoolTask : Task
 
         description = "Go Swimming in the pool for " + timeAmount.ToString() + " in the Zen Garden";
         restPointsReward = 20;
-        check.SetActive(false);
+        check.GetComponent<SpriteRenderer>().enabled = false;
 
         Goals.Add(new TimeGoal(this, "pool", "Go Swimming in the pool in the Zen Garden",false, false, 0, timeAmount, 0));
 
@@ -36,8 +36,8 @@ public class PoolTask : Task
 
             if (Completed)
             {
-                check.SetActive(true);
+            check.GetComponent<SpriteRenderer>().enabled = true;
             }
-        
+
     }
 }

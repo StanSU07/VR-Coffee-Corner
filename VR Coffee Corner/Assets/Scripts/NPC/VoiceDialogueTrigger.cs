@@ -1,45 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+﻿using UnityEngine;
 
 public class VoiceDialogueTrigger : MonoBehaviour
 {
     public VoiceDialogue vDialogue;
     public bool GirlTalking;
     public bool DudeTalking;
-
+    public bool BoothTalking;
     public void Update()
     {
         GirlTalking = FindObjectOfType<GirlVoiceDialogueManager>().isTalking;
         DudeTalking = FindObjectOfType<DudeVoiceDialogueManager>().isTalking;
+        BoothTalking = FindObjectOfType<BoothDialogueManager>().isTalking;
     }
 
-    public void triggerfoodDialogue()
+    public void TriggerFoodDialogue()
     {
-        if (this.gameObject.name == "FoodGirl")
+        if (this.gameObject.name == "FoodGirl" && ! GirlTalking) 
         {
-            if (!GirlTalking)
-            {
-                FindObjectOfType<GirlVoiceDialogueManager>().StartVDialogue(vDialogue);
-            }
+          FindObjectOfType<GirlVoiceDialogueManager>().StartVDialogue(vDialogue);
         }
     }
 
-    public void triggertaskDialogue()
+    public void TriggerTaskDialogue()
     {
-        if (this.gameObject.name == "TaskDude")
+        if (this.gameObject.name == "TaskDude" && !DudeTalking)
         {
-            if (!DudeTalking)
-            {
-                FindObjectOfType<DudeVoiceDialogueManager>().StartConversation();
-
-            }
+          FindObjectOfType<DudeVoiceDialogueManager>().StartConversation();
         }
     }
 
-    public void test()
+    public void TriggerBoothDialogue()
     {
-        Debug.Log("test");
+        if (this.gameObject.name == "BoothNPC" && !BoothTalking)
+        {
+          FindObjectOfType<BoothDialogueManager>().StartVDialogue(vDialogue);
+        }
     }
 }

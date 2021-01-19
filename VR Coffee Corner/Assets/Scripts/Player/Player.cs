@@ -16,12 +16,8 @@ public class Player : MonoBehaviour
     public EnergyBar enBar;
     private bool foodConsumed;
     public int decreaseAmount; //how much should the energy deacrease
-    public float decreasePerSec; //per how many seconds
+    public float decreasePerSec; //per n seconds
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
     private void Start()
     {
         currentEnergy = maxEnergy;
@@ -56,8 +52,6 @@ public class Player : MonoBehaviour
         //-------------------------
 
     }
-
-
 
 
     //Energy Bar Code Start
@@ -101,6 +95,7 @@ public class Player : MonoBehaviour
         enBar.SetEnergy(currentEnergy);
     }
 
+    //Decreases the energy value by "decrease amount" per sec ("decreasePerSec") constantly
     IEnumerator DecreaseEn()
     {
         if (currentEnergy > 0)
@@ -121,7 +116,7 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    //it stops decreasing the energy for 5 sec after consuming food
     IEnumerator FoodConsumed()
     {
         StopCoroutine("DecreaseEn");

@@ -11,16 +11,16 @@ public class Teleport : MonoBehaviour
     private GameObject zenlobbyPortal;
     private GameObject arcadelobbyPortal;
 
-    private void Awake()
-    {
-       // DontDestroyOnLoad(this);
-    }
+    public GameObject xrRig;
+
     private void Start()
     {
         zenPortal = GameObject.Find("ZenPortal");
         arcadePortal = GameObject.Find("ArcadePortal");
         zenlobbyPortal = GameObject.Find("PortalToZen");
         arcadelobbyPortal = GameObject.Find("PortalToArcade");
+
+        xrRig = GameObject.Find("XR Rig");
     }
 
     //Summary
@@ -32,30 +32,29 @@ public class Teleport : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Entered Portal");
-            // SceneManager.LoadScene("ZenRoom");
-            //collision.gameObject.transform.position = new Vector3(23, 0, 0);
 
             if (this.gameObject == zenlobbyPortal)
             {
-                SceneManager.LoadScene("ZenRoom");
-               // player.transform.position = new Vector3(zenPortal.transform.position.x, zenPortal.transform.position.y, zenPortal.transform.position.z + 20);
+               // SceneManager.LoadScene("ZenRoom");
+                xrRig.transform.position = new Vector3(zenPortal.transform.position.x, zenPortal.transform.position.y, zenPortal.transform.position.z + 20);
             }
+
             if (this.gameObject == arcadelobbyPortal)
             {
-                SceneManager.LoadScene("ArcadeRoom");
-               // player.transform.position = new Vector3(arcadePortal.transform.position.x + 20, arcadePortal.transform.position.y, arcadePortal.transform.position.z);
-
-
+                //SceneManager.LoadScene("ArcadeRoom");
+                xrRig.transform.position = new Vector3(arcadePortal.transform.position.x - 20, arcadePortal.transform.position.y, arcadePortal.transform.position.z);
             }
+
             if (this.gameObject == zenPortal)
             {
-                SceneManager.LoadScene("MainLobby");
-                //player.transform.position = new Vector3(zenlobbyPortal.transform.position.x , zenlobbyPortal.transform.position.y, zenlobbyPortal.transform.position.z);
+                //SceneManager.LoadScene("MainLobby");
+                xrRig.transform.position = new Vector3(zenlobbyPortal.transform.position.x , zenlobbyPortal.transform.position.y, zenlobbyPortal.transform.position.z);
             }
+
             if (this.gameObject == arcadePortal)
             {
-                SceneManager.LoadScene("MainLobby");
-                //player.transform.position = new Vector3(arcadelobbyPortal.transform.position.x + 20, arcadelobbyPortal.transform.position.y, arcadelobbyPortal.transform.position.z);
+                //SceneManager.LoadScene("MainLobby");
+                xrRig.transform.position = new Vector3(arcadelobbyPortal.transform.position.x + 20, arcadelobbyPortal.transform.position.y, arcadelobbyPortal.transform.position.z);
             }
 
         }

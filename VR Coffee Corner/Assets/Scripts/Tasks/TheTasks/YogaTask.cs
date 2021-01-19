@@ -21,7 +21,7 @@ public class YogaTask :  Task
 
         description = "Do Yoga in the Zen Garden for "+ timeAmount.ToString() + " seconds";
         restPointsReward = 10;
-        check.SetActive(false);
+        check.GetComponent<SpriteRenderer>().enabled = false;
 
         Goals.Add(new TimeGoal(this, "yoga", "Do Yoga in the Zen Garden", false, false, 0, timeAmount, 0));
         Goals.ForEach(g => g.Init());
@@ -37,7 +37,7 @@ public class YogaTask :  Task
 
             if (Completed)
             {
-                check.SetActive(true);
+            check.GetComponent<SpriteRenderer>().enabled = true;
             }
 
     }

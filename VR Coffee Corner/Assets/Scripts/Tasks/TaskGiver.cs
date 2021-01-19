@@ -32,11 +32,6 @@ public class TaskGiver : MonoBehaviour
     public AudioSource[] voicelines;
     public AudioSource TaskDude;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
     private void Start()
     {
         taskWindow.SetActive(false);
@@ -46,6 +41,29 @@ public class TaskGiver : MonoBehaviour
     {
         stpwManager = GameObject.Find("Stopwatch_Manager").GetComponent<Stopwatch_Manager>();
         taskWindow = GameObject.Find("TaskWindow");
+
+        //Testing-----------------------------------
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Debug.Log("added");
+            System.Type type1 = System.Type.GetType("FlowersTask");
+            Task1 = (Task)tasks.AddComponent(type1);
+        }
+        if (Input.GetKeyDown(KeyCode.Y)) { 
+            System.Type type2 = System.Type.GetType("YogaTask");
+            Task2 = (Task)tasks.AddComponent(type2);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Debug.Log("destroyed");
+
+            Destroy(tasks.GetComponent("YogaTask"));
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(tasks.GetComponent("FlowersTask"));
+        }
+        //--------------------------------------
     }
 
     public void Interact()
@@ -87,6 +105,8 @@ public class TaskGiver : MonoBehaviour
 
     }
 
+    //checks if all tasks assigned have been completed
+    //>If yes then give the reward for those tasks and remove tasks from the tasks gameobject
     void CheckTask()
     {
 
@@ -109,6 +129,12 @@ public class TaskGiver : MonoBehaviour
             TaskDude.clip = voicelines[3].clip;
             TaskDude.Play();
             Debug.Log(TaskDude.clip.name.ToString());
+
+            //remove tasks
+            Destroy(GetComponent(taskType1));
+            Destroy(GetComponent(taskType2));
+            Destroy(GetComponent(taskType3));
+
         }
         else
         {

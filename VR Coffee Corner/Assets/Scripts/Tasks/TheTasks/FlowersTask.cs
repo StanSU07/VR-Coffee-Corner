@@ -15,13 +15,13 @@ public class FlowersTask : Task
 
     void Start()
     {
-        descriptionText = GameObject.Find("Task3").GetComponent<TMP_Text>();
+        descriptionText = GameObject.Find("Task1").GetComponent<TMP_Text>();
         rewardText = GameObject.Find("Reward3").GetComponent<TMP_Text>();
         check = GameObject.Find("FChecked");
 
         description = "Pick " + amount.ToString() + " Flowers in the Zen Garden";
         restPointsReward = 15;
-        check.SetActive(false);
+        check.GetComponent<SpriteRenderer>().enabled = false;
 
         Goals.Add(new CollectingGoal(this, "flower", "Pick Flowers in the Zen Garden", false, 0, amount, 0));
         Goals.ForEach(g => g.Init());
@@ -30,12 +30,13 @@ public class FlowersTask : Task
 
     private void Update()
     {
-            descriptionText.text = description;
-            rewardText.text = restPointsReward.ToString() + " pnt";
+
+        descriptionText.text = description;
+        rewardText.text = restPointsReward.ToString() + " pnt";
 
             if (Completed)
             {
-                check.SetActive(true);
+            check.GetComponent<SpriteRenderer>().enabled = true;
             }
     }
 }

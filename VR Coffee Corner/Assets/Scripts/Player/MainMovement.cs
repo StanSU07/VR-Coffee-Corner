@@ -103,15 +103,6 @@ public class MainMovement : MonoBehaviour
 
      void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "portal")
-        {
-/*            Debug.Log("collided with portal");
-            SceneManager.LoadScene("ZenRoom");
-            player.transform.position = new Vector3(-4, 10, -20);
-            gameObject.transform.position = new Vector3(-4, 10, 30);*/
-
-        }
-
         if (collision.gameObject.name == "Chair")
         {
             gameObject.transform.position = chair.transform.position;
@@ -119,38 +110,6 @@ public class MainMovement : MonoBehaviour
           
         }
      }
-    public void TeleportToZen()
-    {
-        Debug.Log("Entered portal");
-        SceneManager.LoadScene("ZenRoom", LoadSceneMode.Single);
-        player.transform.position = new Vector3(0, 20, -31);
-        gameObject.transform.position = new Vector3(0, 10, -31);
-
-    }
-    public void TeleportToArcade()
-    {
-        Debug.Log("Entered portal");
-        SceneManager.LoadScene("ArcadeRoom", LoadSceneMode.Single);
-        player.transform.position = new Vector3(24, 20, 0);
-        gameObject.transform.position = new Vector3(24, 10, 0);
-
-    }
-    public void TeleportToLobbyFromZen()
-    {
-        Debug.Log("Entered portal");
-        SceneManager.LoadScene("MainLobby", LoadSceneMode.Single);
-        player.transform.position = new Vector3(0, 20, -31);
-        gameObject.transform.position = new Vector3(24, 10, 33);
-
-    }
-    public void TeleportToLobbyFromArcade()
-    {
-        Debug.Log("Entered portal");
-        SceneManager.LoadScene("MainLobby", LoadSceneMode.Single);
-        player.transform.position = new Vector3(0, 20, -31);
-        gameObject.transform.position = new Vector3(0, 10, -31);
-
-    }
     public void chairSit(){
             gameObject.transform.position = chair.transform.position;
             sitting=true;
