@@ -31,6 +31,7 @@ public class TaskGiver : MonoBehaviour
 
     public AudioSource[] voicelines;
     public AudioSource TaskDude;
+    public Animator buttonAnim;
 
     private void Start()
     {
@@ -39,8 +40,6 @@ public class TaskGiver : MonoBehaviour
 
     private void Update()
     {
-        stpwManager = GameObject.Find("Stopwatch_Manager").GetComponent<Stopwatch_Manager>();
-        taskWindow = GameObject.Find("TaskWindow");
 
         //Testing-----------------------------------
         if (Input.GetKeyDown(KeyCode.A))
@@ -109,11 +108,9 @@ public class TaskGiver : MonoBehaviour
     //>If yes then give the reward for those tasks and remove tasks from the tasks gameobject
     void CheckTask()
     {
-
-        //get a task reference
-       // Task1 = GameObject.Find("Tasks").GetComponent<YogaTask>();
         if (Task1.Completed && Task2.Completed && Task3.Completed)
         {
+            //give the reward to the player
             Task1.GiveReward();
             Task2.GiveReward();
             Task3.GiveReward();
@@ -121,6 +118,7 @@ public class TaskGiver : MonoBehaviour
             AssignedTask = false;
             taskWindow.SetActive(false);
 
+            //reset the timers from zen garden
             Timer1.ResetTimer();
             Timer2.ResetTimer();
             stpwManager.resetStpwMethod();
@@ -128,12 +126,13 @@ public class TaskGiver : MonoBehaviour
             Debug.Log("You completed the tasks");
             TaskDude.clip = voicelines[3].clip;
             TaskDude.Play();
-            Debug.Log(TaskDude.clip.name.ToString());
 
             //remove tasks
-            Destroy(GetComponent(taskType1));
-            Destroy(GetComponent(taskType2));
-            Destroy(GetComponent(taskType3));
+            Destroy(tasks.GetComponent(taskType1));
+            Destroy(tasks.GetComponent(taskType2));
+            Destroy(tasks.GetComponent(taskType3));
+
+            buttonAnim.SetBool("isOpen", false);
 
         }
         else
@@ -141,7 +140,7 @@ public class TaskGiver : MonoBehaviour
             Debug.Log("You still have tasks to complete");
             TaskDude.clip = voicelines[2].clip;
             TaskDude.Play();
-            Debug.Log(TaskDude.clip.name.ToString());
+            buttonAnim.SetBool("isOpen", false);
 
         }
     }

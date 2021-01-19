@@ -13,7 +13,7 @@ public class TriggerSpace : MonoBehaviour
 
     void Start()
     {
-        taskGiver = GameObject.Find("TaskGiver").GetComponent<TaskGiver>();
+        taskGiver = GameObject.Find("TaskGiverScript").GetComponent<TaskGiver>();
         Timer1.timer = 0;
         Timer2.timer = 0;
 
@@ -40,8 +40,10 @@ public class TriggerSpace : MonoBehaviour
         {
             if(this.id == "yoga")
             {
+                Debug.Log("this is: " + id);
                 if (image.activeSelf)
                 {
+                    Debug.Log("activate sp timer");
                     StopWatchTimer.GetComponent<StopWatch>().StartTimer();
                 }
                 else

@@ -13,7 +13,6 @@ public class MainMovement : MonoBehaviour
     public LayerMask groundLayer;
     public float additionalHeight = 0.2f;
     public bool sitting=false;
-    public GameObject player;
     public InputHelpers.Button tpActivationButton;
     public float activationThreshold = 0.1f;
     public XRController controller;
@@ -30,11 +29,6 @@ public class MainMovement : MonoBehaviour
         rig = GetComponent<XRRig>();
         chair = GameObject.Find("Chair");
 
-    }
-
-    private void Start()
-    {
-        gameObject.transform.position = player.transform.position;
     }
 
     void Update()

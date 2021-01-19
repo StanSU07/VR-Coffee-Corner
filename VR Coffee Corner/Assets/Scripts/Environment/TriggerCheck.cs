@@ -62,12 +62,13 @@ public class TriggerCheck : MonoBehaviour
                 {
                     FoodUI.SetActive(true);
                 }
-                else
-                {
-                    FoodUI.SetActive(false);
-                }
             }
         }
+    }
+
+    public void DeactivateFoodUI()
+    {
+        FoodUI.SetActive(false);
     }
 
     private void OnTriggerExit(Collider collision)

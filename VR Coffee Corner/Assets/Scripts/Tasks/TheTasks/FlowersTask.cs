@@ -15,7 +15,7 @@ public class FlowersTask : Task
 
     void Start()
     {
-        descriptionText = GameObject.Find("Task1").GetComponent<TMP_Text>();
+        descriptionText = GameObject.Find("Task3").GetComponent<TMP_Text>();
         rewardText = GameObject.Find("Reward3").GetComponent<TMP_Text>();
         check = GameObject.Find("FChecked");
 
