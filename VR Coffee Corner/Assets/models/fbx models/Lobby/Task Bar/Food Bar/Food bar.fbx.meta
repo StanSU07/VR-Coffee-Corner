@@ -3,7 +3,17 @@ guid: 355d28cc0a93e7849aad67d8a36b00dd
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 861c0005990b5ce4b872e49ae3e9e613, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hanze orange
+    second: {fileID: 2100000, guid: b1abf6fa14b255042a877c25f74688c9, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
