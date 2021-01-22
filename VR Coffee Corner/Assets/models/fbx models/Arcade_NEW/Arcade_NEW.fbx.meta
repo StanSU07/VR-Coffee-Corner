@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: a96bdbac806c2504b942ed56fe4550f4
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black Glass
+    second: {fileID: 2100000, guid: beb68f72dfaea2541b497824c7ce8999, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EDEN logo
+    second: {fileID: 2100000, guid: 80049640e3ed84749a00737ea080c030, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LamFloor
+    second: {fileID: 2100000, guid: c717b30c29ddcd141b4bb234344ce05a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neon
+    second: {fileID: 2100000, guid: f9fde3e2c817da8459a4abf8f474afbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neon2
+    second: {fileID: 2100000, guid: 8371ce45e42823e43ae6cb4ae2ced2f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall1
+    second: {fileID: 2100000, guid: 6d02660a99b9d7a44a2ab7f735e3c146, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arcadescreen
+    second: {fileID: 2100000, guid: ca53f32b21b0aa9489385d36c16b8bce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arcadescreen2
+    second: {fileID: 2100000, guid: 0708f21a1db08024089212998688e8af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arcadescreen3
+    second: {fileID: 2100000, guid: 370dc99b8329a84439f7003d65000335, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arcadesignmain
+    second: {fileID: 2100000, guid: 9f6a4efbfa6bc7445817ac810b29e7ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capcomsign
+    second: {fileID: 2100000, guid: 6de69ba341156544a8de7e77242ebe05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cinemasign
+    second: {fileID: 2100000, guid: cc14d6a9af0014640b1cff0dcbc7ded9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cinescreen1
+    second: {fileID: 2100000, guid: 4db04ec78d275dc42923258b3e966f3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cinescreen2
+    second: {fileID: 2100000, guid: db93e680615dcc14290fef5d5dc53716, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: colrough
+    second: {fileID: 2100000, guid: 8be8a44b085847843b79abf9b754d8a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: danceflooranims
+    second: {fileID: 2100000, guid: e64fdf78139ff8f49bbf42b99dcd11f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: holoplanet
+    second: {fileID: 2100000, guid: b581d58aa4a7c1c42b1061f01e29c68a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: holoplanet 1
+    second: {fileID: 2100000, guid: 6569d354a42abf944a842bcb8f3ecdaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: holoplanet 2
+    second: {fileID: 2100000, guid: 0657c77a82fab624e959ec639e7f96a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: holoring
+    second: {fileID: 2100000, guid: 04b6ca62990ce8741bb61e25e2c8ac20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light
+    second: {fileID: 2100000, guid: 409764d2544f69c41ad8f4f322db9336, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: 278705de27cf9d046bb4a66dcb8c7d5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sign atari
+    second: {fileID: 2100000, guid: 217c526639621f2458198e05e52732b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sign eden
+    second: {fileID: 2100000, guid: dc76b0668bdae154387327cda0e49214, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sign namco
+    second: {fileID: 2100000, guid: 05c4f0016d6bd0642ae362957f9d99bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sign nintendo
+    second: {fileID: 2100000, guid: 1bee34c4501be0748b5593c68564accf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sign sega
+    second: {fileID: 2100000, guid: 3bf700d1cdfa1ee42b20d13c7e3c5fb9, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ImphenziaPalette01
+    second: {fileID: 2800000, guid: 0c34fdb29e4a5834f863dc2949838ab6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: arcade floor
+    second: {fileID: 2800000, guid: 093181d62e6927b4cad4638a1f4f4840, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
