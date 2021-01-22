@@ -2030,7 +2030,6 @@ MonoBehaviour:
     m_Bits: 0
   additionalHeight: 0.2
   sitting: 0
-  player: {fileID: 0}
   tpActivationButton: 2
   activationThreshold: 0.1
   controller: {fileID: 1825005395299547922}
