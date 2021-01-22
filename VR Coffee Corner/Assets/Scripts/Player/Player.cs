@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
     public int currentEnergy;
     public EnergyBar enBar;
     private bool foodConsumed;
-    public int decreaseAmount; //how much should the energy deacrease
-    public float decreasePerSec; //per n seconds
+    public int decreaseAmount = 1; //how much should the energy deacrease
+    public float decreasePerSec = 1; //per n seconds
 
     private void Start()
     {
@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
 
         restPoints = 0;
         maxEnergy = 100;
+
+        decreaseAmount = 1;
+        decreasePerSec = 1;
     }
 
     private void Update()

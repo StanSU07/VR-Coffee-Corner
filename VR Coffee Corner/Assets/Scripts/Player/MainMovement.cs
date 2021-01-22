@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMovement : MonoBehaviour
 {
-    public float speed =1;
+    public float speed = 4;
     public XRNode inputSource;
     public float gravity = -9.81f;
     public LayerMask groundLayer;
@@ -21,7 +21,8 @@ public class MainMovement : MonoBehaviour
     private XRRig rig;
     private Vector2 inputAxis;
     private CharacterController character;
-    private GameObject chair; 
+    private GameObject chair;
+    private int currentEn;
     
     void Awake()
     {
@@ -39,6 +40,16 @@ public class MainMovement : MonoBehaviour
         if (controller)
         {
             CheckIfActivated(controller);
+        }
+
+        currentEn = GetComponent<Player>().currentEnergy;
+        if(currentEn > 0)
+        {
+            speed = 4;
+        }
+        if (currentEn <= 0)
+        {
+            speed = 2;
         }
     }
     

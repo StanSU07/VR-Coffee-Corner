@@ -9,6 +9,7 @@ public class text : MonoBehaviour
     public TextMeshPro dateText;
     public TextMeshPro locationText;
     public TextMeshPro timerText;
+    public TextMeshPro pointsText;
     float gameTimer = 0f;
     
 
@@ -46,6 +47,10 @@ public class text : MonoBehaviour
         int hours = (int)(gameTimer/3600) % 24;
         string timerString = string.Format("{0:0}:{1:00}:{2:00}",hours, minutes, seconds);
         
-        timerText.text=timerString;      
+        timerText.text=timerString;
+
+        int points = GameObject.Find("XR Rig").GetComponent<Player>().restPoints;
+        pointsText.text = points + " points";
 }
+
     }

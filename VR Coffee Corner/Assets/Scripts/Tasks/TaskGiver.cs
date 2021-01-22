@@ -101,7 +101,7 @@ public class TaskGiver : MonoBehaviour
         System.Type type3 = System.Type.GetType(taskType3);
         Task3 = (Task)tasks.AddComponent(type3);
 
-
+        buttonAnim.SetBool("isOpen", false);
     }
 
     //checks if all tasks assigned have been completed
