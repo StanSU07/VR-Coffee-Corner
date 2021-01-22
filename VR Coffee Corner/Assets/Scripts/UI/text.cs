@@ -24,9 +24,21 @@ public class text : MonoBehaviour
   
     }
 
+    public void SetLocationZenGarden(){
+        locationText.SetText("Zen Garden");
+    }
+
+    public void SetLocationMainLobby(){
+        locationText.SetText("Main Lobby");
+    }
+
+     public void SetLocationArcade(){
+        locationText.SetText("Arcade room");
+    }
+
+
     void Update(){
-        string location = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        locationText.text = location;
+
         gameTimer +=Time.deltaTime;
 
         int seconds = (int)(gameTimer % 60);
