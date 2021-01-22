@@ -504,6 +504,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 355d28cc0a93e7849aad67d8a36b00dd, type: 3}
+--- !u!1 &113266363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113266365}
+  - component: {fileID: 113266364}
+  - component: {fileID: 113266366}
+  m_Layer: 0
+  m_Name: BlockManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &113266364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113266363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0dc64c85e52f894180c06d01044bb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allBlockTypes:
+  - blockName: Dirt
+    blockMat: {fileID: 2100000, guid: b3dac0db79d996144a3f8b087293c56d, type: 2}
+  - blockName: Wood
+    blockMat: {fileID: 2100000, guid: 8935e8c98a616cb4da1d1bc10d064ae7, type: 2}
+  - blockName: Grass
+    blockMat: {fileID: 2100000, guid: 12090bf96b5f40e4ba1fde7e4b6ec071, type: 2}
+  - blockName: Brick
+    blockMat: {fileID: 2100000, guid: e5c0e2ac0fb7a204d8a2463fe0cf38db, type: 2}
+--- !u!4 &113266365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113266363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 157.33861, y: -33.007942, z: 20.416615}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113266366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113266363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac3b09a6880b0e4fb940243c7c3bd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  buildableSurfacesLayer:
+    serializedVersion: 2
+    m_Bits: 2304
+  blockTemplatePrefab: {fileID: 0}
+  blockPrefab: {fileID: 0}
+  templateMaterial: {fileID: 2100000, guid: c47d368d8a82e174e89653048a85226d, type: 2}
 --- !u!1 &125074232
 GameObject:
   m_ObjectHideFlags: 0
