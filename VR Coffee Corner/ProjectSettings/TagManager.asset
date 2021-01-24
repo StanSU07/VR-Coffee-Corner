@@ -6,6 +6,7 @@ TagManager:
   tags:
   - door
   - portal
+  - Whiteboard
   layers:
   - Default
   - TransparentFX
