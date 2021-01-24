@@ -20,6 +20,7 @@ public class text : MonoBehaviour
        
         timeText.text=time;
         dateText.text=date; 
+        locationText.SetText("Main Lobby");
        
         
   
