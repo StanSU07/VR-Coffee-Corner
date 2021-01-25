@@ -129,6 +129,7 @@
     <Compile Include="Assets\Scripts\Tasks\Timers\Timer2.cs" />
     <Compile Include="Assets\Scripts\Tasks\TriggerSpace.cs" />
     <Compile Include="Assets\Scripts\UI\Taskstext.cs" />
+    <Compile Include="Assets\Scripts\UI\VideoScript.cs" />
     <Compile Include="Assets\Scripts\UI\text.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />
     <Compile Include="Assets\Scripts\positionManager.cs" />
