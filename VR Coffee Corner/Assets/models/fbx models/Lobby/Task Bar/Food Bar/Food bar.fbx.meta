@@ -7,6 +7,46 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Brick
+    second: {fileID: 2100000, guid: d2e9671a380d3484887228c0d6ec0d11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Button
+    second: {fileID: 2100000, guid: 1248fd577b4bcf444973a4573e94142f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair
+    second: {fileID: 2100000, guid: d8827b1973d41d54e9450f23bd3acd99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cold
+    second: {fileID: 2100000, guid: c2201e447b17593459bf8de0901b1aa6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Countertop
+    second: {fileID: 2100000, guid: 4882964a2fc61d34f9ab5c8efe656777, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark wood
+    second: {fileID: 2100000, guid: ae8d7ac5d98c0634b84f010d35b0ea85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Furnace
+    second: {fileID: 2100000, guid: 0afdcfe619bb7e94bbdb3f9fa42c1cd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Furniture
+    second: {fileID: 2100000, guid: e36cd39561b98634987419b26885fee0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Glass
     second: {fileID: 2100000, guid: 861c0005990b5ce4b872e49ae3e9e613, type: 2}
   - first:
@@ -14,6 +54,41 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Hanze orange
     second: {fileID: 2100000, guid: b1abf6fa14b255042a877c25f74688c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hot
+    second: {fileID: 2100000, guid: 1fa758bd86672544b80396c6ca908265, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamp
+    second: {fileID: 2100000, guid: 6aef0b661addc0648ad6d4951699423f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamp small
+    second: {fileID: 2100000, guid: c19fb46ebced2e243bd065ee489f7943, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light wood
+    second: {fileID: 2100000, guid: 90c4893a6d267b24293cd065593715cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: f9d31cde174769040b8635f111c362dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: d15598743396f9547b378a857edfb477, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall
+    second: {fileID: 2100000, guid: e811e0d62c6f11e4ea0758f5a4b452a2, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -5,6 +5,36 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass Display reception
+    second: {fileID: 2100000, guid: 7d80da5d979bab44093558fe790e2c8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass Display snacc
+    second: {fileID: 2100000, guid: 3db7b7ca41b72de43a10fe34c4b1d21d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LEDs
+    second: {fileID: 2100000, guid: cba59d57eaeb4c04a86f06588a5bb45b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 981477774d2bfaf47984c1d3a5178f76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange Glow
+    second: {fileID: 2100000, guid: 66e9e5506c082c24a8cab0d4c5b8e4f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plast Main
+    second: {fileID: 2100000, guid: cc68ec22f105de742a403657368c1e24, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ImphenziaPalette01
