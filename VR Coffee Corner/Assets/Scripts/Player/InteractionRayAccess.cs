@@ -7,7 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class InteractionRayAccess : MonoBehaviour
 {
     public XRController rightcontroller;
-    public XRController leftcontroller;
     public InputHelpers.Button rayActivationButton;
     public float activationThreshold = 0.1f;
 
@@ -35,22 +34,6 @@ public class InteractionRayAccess : MonoBehaviour
             }
 
         }
-        if (leftcontroller)
-            if (ButtonHeldDown(leftcontroller))
-            {
-                if (!justPressed)
-                {
-                    justPressed = true;
-                    leftcontroller.gameObject.SetActive(!leftcontroller.gameObject.activeSelf);
-                }
-            }
-            else
-            {
-                if (justPressed)
-                {
-                    justPressed = false;
-                }
-            }
 
 
     }

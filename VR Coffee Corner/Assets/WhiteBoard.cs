@@ -5,7 +5,7 @@ using System.Linq;
 
 public class WhiteBoard : MonoBehaviour
 {
-    private int textureSize = 2048;
+    private int textureSize = 20;
     private int penSize = 10;
     private Texture2D texture;
     private Color[] color;
