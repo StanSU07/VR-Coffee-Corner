@@ -1724,7 +1724,6 @@ MonoBehaviour:
   tpActivationButton: 2
   activationThreshold: 0.1
   controller: {fileID: 1825005395299547922}
-  chair: []
 --- !u!143 &6880065965928752323
 CharacterController:
   m_ObjectHideFlags: 0

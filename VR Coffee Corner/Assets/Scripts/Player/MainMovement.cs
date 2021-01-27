@@ -21,14 +21,14 @@ public class MainMovement : MonoBehaviour
     private XRRig rig;
     private Vector2 inputAxis;
     private CharacterController character;
-    public GameObject[] chair;
+ 
     private int currentEn;
     
     void Awake()
     {
         character = GetComponent<CharacterController>();
         rig = GetComponent<XRRig>();
-        chair = GameObject.FindGameObjectsWithTag("chair");
+  
 
     }
 
@@ -106,29 +106,6 @@ public class MainMovement : MonoBehaviour
         return hasHit;
     }
 
-     void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Chair")
-        {
-            for (int i = 0; i < chair.Length; i++)
-            {
-                gameObject.transform.position = chair[i].transform.position;
-                sitting = true;
-            }
+  
 
-          
-        }
-
-
-     }
-    public void chairSit(){
-        for (int i = 0; i < chair.Length; i++)
-        {
-            gameObject.transform.position = chair[i].transform.position;
-            sitting = true;
-            Debug.Log("OPA");
-        }
-
-
-    }
 }
