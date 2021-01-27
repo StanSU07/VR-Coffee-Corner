@@ -28,6 +28,7 @@ public class MainMovement : MonoBehaviour
     {
         character = GetComponent<CharacterController>();
         rig = GetComponent<XRRig>();
+        chair = GameObject.FindGameObjectsWithTag("chair");
 
     }
 
@@ -123,14 +124,11 @@ public class MainMovement : MonoBehaviour
     public void chairSit(){
         for (int i = 0; i < chair.Length; i++)
         {
-         
-                gameObject.transform.position = new Vector3(chair[i].transform.position.x, chair[i].transform.position.y + 1, chair[i].transform.position.z);
-
-                sitting = true;
-                Debug.Log("ChIR");
-            
-
+            gameObject.transform.position = chair[i].transform.position;
+            sitting = true;
+            Debug.Log("OPA");
         }
+
 
     }
 }
